@@ -1,8 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+
+## 可执行脚本
+
+在项目目录中，您可以运行:
+### `npm i`
+
+安装依赖
 
 ### `npm start`
 
@@ -29,7 +34,13 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note: 这是一种单向操作。 一旦你弹出，你就不能回去了!**
+
+如果您对构建工具和配置选择不满意，可以随时“eject”。 此命令将从项目中删除单个构建依赖项。.
+
+相反，它会将所有配置文件和传递依赖项（Webpack，Babel，ESLint等）复制到项目中，以便您可以完全控制它们。 除`eject`之外的所有命令仍然可以工作，但它们将指向复制的脚本，以便您可以调整它们。 在这一点上，你是独立的。
+
+你不必使用`eject`。 精选功能集适用于中小型部署，您不应觉得有义务使用此功能。 但是，我们知道如果您准备好它时无法自定义此工具将无用
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
@@ -37,32 +48,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
