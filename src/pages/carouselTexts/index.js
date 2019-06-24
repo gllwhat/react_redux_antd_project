@@ -24,17 +24,7 @@ export default class SnapshotSample extends PureComponent {
             }
             this.addMsg()
         }, 1000);
-        const fun = ({ x, y } = { x: 0, y: 0 }) => {
-            return [x, y]
-        }
-        console.log('fun({ x: 3, y: 8 })', fun({ x: 3, y: 8 }))
-        console.log('fun({ x: 3 })', fun({ x: 3 }))
-        console.log('fun({})', fun({}))
-        console.log('fun()', fun())
-        fun({ x: 3, y: 8 }); // [3, 8]
-        fun({ x: 3 }); // [3, 0]
-        fun({}); // [0, 0]
-        fun(); // [0, 0]
+        
     }
     getSnapshotBeforeUpdate = () => {
         return this.refs.box.scrollHeight
