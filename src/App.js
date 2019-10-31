@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import Clock from "./pages/clock";
 import CarouselTexts from "./pages/carouselTexts";
-
 const Route1 = () => {
   return <div>11111</div>
 }

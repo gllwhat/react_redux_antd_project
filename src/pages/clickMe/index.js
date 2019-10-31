@@ -51,6 +51,21 @@ export default class ClickMe extends PureComponent {
     clickMe = () => {
         this.setNum()
     }
+    componentDidMount() {
+        function sleep(duration) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(resolve, duration);
+            })
+        }
+        async function foo() {
+            console.log("a")
+            await sleep(2000)
+            console.log("b")
+        }
+        foo()
+
+
+    }
     render(){
         console.log("render this.state",this.state)
         return <div className="ClickMeBox" ref="ClickMeBox">

@@ -1,0 +1,31 @@
+.BlackW {
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid #666;
+        box-sizing: border-box;
+        background: #fff799;
+    }
+    .blackW_dom_span {
+        
+    }
+    .blackW_dom_span_w_circle,
+    .blackW_dom_span_b_circle {
+        display: block;
+        width: 25px;
+        height: 25px;
+        background: #fff;
+        border: 0px;
+        border-radius: 50%;
+    }
+
+    .blackW_dom_span_b_circle {
+        background: #000;
+    }
+}
