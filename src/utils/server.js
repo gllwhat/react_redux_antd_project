@@ -1,78 +1,49 @@
 import axios from "axios";
-
+import qs from "qs"
 let base = "/api";
 
-// 请求前拦截
-axios.interceptors.request.use(
-  config => {
-    return config;
+const fetchCommon = (
+  httpMethod,
+  key,
+  url,
+  {
+    header = {
+      "Conent-Type": "application/json",
+      "x-requested-with": "XMLHttoRequest"
+    },
+    responseType = "json"
   },
-  err => {
-    console.log("请求超时");
-    return Promise.reject(err);
-  }
-);
-
-// 返回后拦截
-axios.interceptors.response.use(
-  data => {
-    return data;
-  },
-  err => {
-    if (err.response.status === 504 || err.response.status === 404) {
-      console.log("服务器被吃了⊙﹏⊙∥");
-    } else if (err.response.status === 401) {
-      console.log("登录信息失效⊙﹏⊙∥");
-    } else if (err.response.status === 500) {
-      console.log("服务器开小差了⊙﹏⊙∥");
-    }
-    return Promise.reject(err);
-  }
-);
-
-// @RequestBody请求
-export const postRequest = (url, params) => {
+  requestPayload = {},
+  params = {}
+) => {
+  let config = {
+    headers: header,
+    responseType: responseType
+  };
   return axios({
-    method: "post",
-    url: `${base}${url}`,
-    data: params,
-    headers: {
-      "Content-Type": "application/json",
-      charset: "utf-8"
+    url: `${url}`,
+    method: httpMethod,
+    headers: config.headers,
+    responseType: config.responseType,
+    data: requestPayload,
+    params,
+    paramsSerializer: function(params) {
+      return qs.stringify(params, { arrayFormat: "brackets" });
     }
-  });
-};
-
-// @RequsetParam请求
-export const postRequestParam = (url, params) => {
-  return axios({
-    method: "post",
-    url: `${base}${url}`,
-    data: params,
-    transformRequest: [
-      function(data) {
-        let ret = "";
-        for (let it in data) {
-          ret +=
-            encodeURIComponent(it) + "=" + encodeURIComponent(data[it]) + "&";
-        }
-        return ret;
+  })
+    .then(res => {
+      if (res.status === 200) {
+        return res.data;
       }
-    ],
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    }
-  });
+    })
+    .catch(err => {
+      throw err;
+    });
 };
 
-export const getRequest = url => {
-  return axios({
-    method: "get",
-    url: `${base}${url}`
-  });
+export const getRequest = (url, params, options = {}) => {
+  return fetchCommon("get", null, url, options, undefined, params, false);
 };
-
-export const multiple = function(requsetArray, callback) {
-  axios.all(requsetArray).then(axios.spread(callback));
+export const posttRequest = (url, data, options = {}, params) => {
+  return fetchCommon("get", null, url, options, data, params, false);
 };
-
