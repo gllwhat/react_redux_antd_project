@@ -44,6 +44,6 @@ const fetchCommon = (
 export const getRequest = (url, params, options = {}) => {
   return fetchCommon("get", null, url, options, undefined, params, false);
 };
-export const posttRequest = (url, data, options = {}, params) => {
-  return fetchCommon("get", null, url, options, data, params, false);
+export const postRequest = (url, data, options = {}, params) => {
+  return fetchCommon("post", null, url, options, data, params, false);
 };

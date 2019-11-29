@@ -1,0 +1,19 @@
+.lineView {
+  display: block;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ant-table-bordered .ant-table-thead>tr>th {
+  white-space: nowrap;
+}
+.ant-layout-content {
+  overflow: auto;
+}
+.statistic{
+  display: inline-block;
+  min-width: 230px;
+}
+
+

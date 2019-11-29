@@ -44,6 +44,9 @@ class App extends Component {
               <Menu.Item key="houseInfo">
                 <Link to="/house">房屋信息</Link>
               </Menu.Item>
+              <Menu.Item key="shopping">
+                <Link to="/shopping">采购信息</Link>
+              </Menu.Item>
             </Menu>
           </Sider>
           <Layout>

@@ -5,11 +5,11 @@ import { getRequest } from "../../utils/server";
 const HousePage = ({}) => {
     let [houseData, setHouseData] = useState({ areaDetail:{}});
     useEffect(()=> {
-        getRequest("/house", {}).then(res => {
-            console.log(res)
-            if(res.code === 0) {
-                setHouseData(res.result[0]);
-            }
+        getRequest("/house/list", {}).then(res => {
+          console.log(res);
+          if (res.code === 0) {
+            setHouseData(res.result[0]);
+          }
         });
     }, [])
     return (
