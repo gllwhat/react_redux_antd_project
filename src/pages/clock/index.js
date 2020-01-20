@@ -16,6 +16,7 @@ export default class Clock extends PureComponent {
         })
     }
     componentWillUnmount() {
+        console.log(1111)
         clearInterval(this.timer)
     }
     componentDidUpdate(prevProps, prevState, prevScrollHeight) {

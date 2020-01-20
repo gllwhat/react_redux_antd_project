@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Icon } from "antd";
 import { Link } from "react-router-dom";
+import { Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 import Main from "../component/main/index"
@@ -47,6 +48,9 @@ class App extends Component {
               <Menu.Item key="shopping">
                 <Link to="/shopping">采购信息</Link>
               </Menu.Item>
+              <Menu.Item key="spending">
+                <Link to="/spending">开销信息</Link>
+              </Menu.Item>
             </Menu>
           </Sider>
           <Layout>
@@ -69,16 +73,14 @@ class App extends Component {
             </Content>
           </Layout>
         </Layout>
-        {/* <h1>Hello Front-Koala</h1>
-        <div className="carTexts">
-          
-        </div>
-        <Clock />
-        <BlackW />
+        {/* <h1>Hello Front-Koala</h1> */}
+        {/* <div className="carTexts"></div> */}
+        {/* <Clock /> */}
+        {/* <BlackW /> */}
 
-        <CarouselTexts />
-        
-        <Router>
+        {/* <CarouselTexts /> */}
+
+        {/* <Switch>
           <ul>
             <li>
               <Link to={"/route1"}>route1</Link>
@@ -90,10 +92,10 @@ class App extends Component {
               <Link to={"/Click"}>Click</Link>
             </li>
           </ul>
-          <Route path={"/:id"} component={Route1} />
-          <Route path={"/route2"} component={Route2} />
-          <Route path={"/Click"} component={Click} />
-        </Router> */}
+          <Route path={"/route1"} component={Clock} /> */}
+          {/* <Route path={"/route2"} component={Route2} />
+          <Route path={"/Click"} component={Click} /> */}
+        {/* </Switch> */}
       </div>
     );
   }

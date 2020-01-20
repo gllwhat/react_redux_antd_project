@@ -17,8 +17,14 @@ const HousePage = ({}) => {
         <Descriptions.Item label="房屋名称">
           {houseData.houseName}
         </Descriptions.Item>
+        <Descriptions.Item label="交房日期">
+          {houseData.houseDate}
+        </Descriptions.Item>
         <Descriptions.Item label="房屋地址" span={3}>
           {houseData.houseAddress}
+        </Descriptions.Item>
+        <Descriptions.Item label="备注" span={3}>
+          {houseData.remark}
         </Descriptions.Item>
         <Descriptions.Item label="建筑面积">
           {houseData.constructionArea}
@@ -26,7 +32,9 @@ const HousePage = ({}) => {
         <Descriptions.Item label="实际面积" span={2}>
           {houseData.actualArea}
         </Descriptions.Item>
-        <Descriptions.Item label="" span={3}>面积详情</Descriptions.Item>
+        <Descriptions.Item label="" span={3}>
+          面积详情
+        </Descriptions.Item>
         <Descriptions.Item label="客厅">
           {houseData.areaDetail.parlor}
         </Descriptions.Item>
